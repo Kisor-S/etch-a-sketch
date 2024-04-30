@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h1 {
     color: red;
 }
@@ -5,21 +11,21 @@ h1 {
 .container {
     width: 800px;
     height: 800px;
-    background-color: white;
-    border: 1px solid black;
+    border: 2px solid black;
     display: flex;
     justify-content: space-between;
 }
 
 .gridRow {
-    border: 1px solid black;
+    border: 0px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50px;
+    width: 6.25%;
     
 }
 
 .gridColumn {
-    border: 1px solid black;
+    border: 0.1px solid grey;
+    height: 6.25%;
 }

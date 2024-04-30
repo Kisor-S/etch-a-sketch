@@ -7,20 +7,25 @@ function defaultGrid () {
     //makeColumns(16);
 }
 
-
-const rows = document.querySelector(".gridRow");
-const columns = document.querySelector(".gridColumn");
 let row ;
 function makeRows(rowNum) {
     for(let i =0 ; i< rowNum ; i++) {
         row = document.createElement("div");
         container.appendChild(row).className = "gridRow";
-        for(let j=0; j<= rowNum; j++) {
+        for(let j=0; j< rowNum; j++) {
             let column = document.createElement("div");
             row.appendChild(column).className = "gridColumn";
+
+            column.addEventListener('mouseover', () =>
+            {
+                column.style.backgroundColor = "black";
+            });
         }
     }
 }
+
+const rows = document.getElementsByClassName(".gridRow");
+const columns = document.getElementsByClassName(".gridColumn");
 
 
 let default1 = defaultGrid();
