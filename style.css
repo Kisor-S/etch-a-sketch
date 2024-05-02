@@ -5,16 +5,37 @@
 }
 
 h1 {
-    color: red;
+    color: rgb(232, 135, 9);
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(188, 213, 200);
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+button {
+    padding : 5px 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #d32316;
+    color: white;
 }
 
 #sketch-area {
     display: flex;
     margin: 100px auto;
+    margin-top: 50px;
     flex-wrap: wrap;
     background-color: white;
 }
