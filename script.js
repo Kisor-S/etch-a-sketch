@@ -31,8 +31,22 @@ function createGrids() {
         sketchArea.appendChild(gridCells).className = "cell";
 
         gridCells.addEventListener("mouseover", setBackgroundColor);
+
+        erase.addEventListener("click" , () => {
+            gridCells.addEventListener("mouseover", () => {
+                gridCells.style.backgroundColor = "white";
+            })
+        })
+
+        black.addEventListener("click" , () => {
+            gridCells.addEventListener("mouseover", () => {
+                gridCells.style.backgroundColor = "black";
+            })
+        })
     }
 }
+
+
 
 createGrids();
 
