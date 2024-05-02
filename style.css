@@ -8,24 +8,17 @@ h1 {
     color: red;
 }
 
-.container {
-    width: 800px;
-    height: 800px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: space-between;
+body {
+    background-color: rgb(188, 213, 200);
 }
 
-.gridRow {
-    border: 0px solid black;
+#sketch-area {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 6.25%;
-    
+    margin: 100px auto;
+    flex-wrap: wrap;
+    background-color: white;
 }
 
-.gridColumn {
-    border: 0.1px solid grey;
-    height: 6.25%;
+.cell {
+    border: 1px solid whitesmoke;
 }

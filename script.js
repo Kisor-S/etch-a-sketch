@@ -1,32 +1,40 @@
-const container = document.querySelector(".container");
+
+const gridArea = 600;
+let boxesPerSide = 16;
+
+const sketchArea = document.querySelector("#sketch-area");
+sketchArea.style.width = sketchArea.style.height = `${gridArea}px` ;
+
+newGrid.addEventListener("click", () => {
+    let gridSize = prompt("Please enter the no.of squares for each side");
+    boxesPerSide = gridSize ;
+    createGrids();
+})
 
 
-
-function defaultGrid () {
-    makeRows(16);
-    //makeColumns(16);
+function setBackgroundColor(){
+    this.style.backgroundColor = "black";
 }
 
-let row ;
-function makeRows(rowNum) {
-    for(let i =0 ; i< rowNum ; i++) {
-        row = document.createElement("div");
-        container.appendChild(row).className = "gridRow";
-        for(let j=0; j< rowNum; j++) {
-            let column = document.createElement("div");
-            row.appendChild(column).className = "gridColumn";
 
-            column.addEventListener('mouseover', () =>
-            {
-                column.style.backgroundColor = "black";
-            });
-        }
+function createGrids() {
+
+    sketchArea.textContent="";
+    const totalSquares = `${boxesPerSide * boxesPerSide}`;
+    const widthOrHeight = `${(gridArea / boxesPerSide)}px`;
+
+    for(let i =0 ; i < totalSquares; i++)
+    {
+        const gridCells = document.createElement("div");
+        gridCells.style.width = gridCells.style.height = widthOrHeight;
+
+        sketchArea.appendChild(gridCells).className = "cell";
+
+        gridCells.addEventListener("mouseover", setBackgroundColor);
     }
 }
 
-const rows = document.getElementsByClassName(".gridRow");
-const columns = document.getElementsByClassName(".gridColumn");
+createGrids();
 
 
-let default1 = defaultGrid();
 
