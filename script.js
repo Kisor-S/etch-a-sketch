@@ -16,7 +16,6 @@ function setBackgroundColor(){
     this.style.backgroundColor = "black";
 }
 
-
 function createGrids() {
 
     sketchArea.textContent="";
@@ -43,8 +42,19 @@ function createGrids() {
                 gridCells.style.backgroundColor = "black";
             })
         })
+
+
+        clear.addEventListener("click", () => {
+            gridCells.style.backgroundColor = "White";
+        })
+
+
+        randm.addEventListener("click", () => {
+            gridCells.addEventListener("mouseover")
+        })
     }
 }
+
 
 
 
